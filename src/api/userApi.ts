@@ -4,7 +4,7 @@ export type User = {
   email: string
 }
 
-const API_URL = 'http://localhost:8081/api/users'
+const API_URL = 'http://localhost:8082/api/users'
 
 export async function getUsers(): Promise<User[]> {
   const response = await fetch(API_URL)

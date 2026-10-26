@@ -6,8 +6,7 @@ export type Product = {
   quantity: number
 }
 
-const API_URL = "http://localhost:8080/api/products"
-
+const API_URL = "http://localhost:8081/api/products"
 export async function getProducts(): Promise<Product[]> {
   const response = await fetch(API_URL)
 
