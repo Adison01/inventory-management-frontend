@@ -1,10 +1,9 @@
 
 pipeline {
-    agent {
-        docker {
-            image 'node:24-alpine'
-            args '-u root'
-        }
+    agent any
+
+    tools {
+        nodejs 'NodeJS-24'
     }
 
     stages {
@@ -16,6 +15,8 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
+                sh 'node --version'
+                sh 'npm --version'
                 sh 'npm ci'
             }
         }
