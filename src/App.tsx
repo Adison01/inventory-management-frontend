@@ -66,6 +66,7 @@ function App() {
 
   function editUser(id: number) {
     const userToEdit = users.find((user) => user.id === id);
+    console.log("Editing user:", userToEdit);
 
     if (userToEdit) {
       setUserName(userToEdit.name);
